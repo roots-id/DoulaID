@@ -12,12 +12,12 @@ The following sequence diagrams show a simplified flow of events for the registr
 sequenceDiagram
 actor user
 user->>doulaid_webapp: Create User
-doulaid_webapp->>doulaid_db A: User Saved
+doulaid_webapp->>doulaid_db: User Saved
 user->>doulaid_webapp: User completes DoulaID step
-doulaid_webapp->>doulaid_db A: User step completion saved
+doulaid_webapp->>doulaid_db: User step completion saved
 user->>doulaid_webapp: User completes DoulaID milestone
-doulaid_webapp->>doulaid_db A: User milestone completion saved
-doulaid_issuer->>doulaid_webapp B: User milestone credential available
+doulaid_webapp->>doulaid_db: User milestone completion saved
+doulaid_issuer->>doulaid_webapp: User milestone credential available
 ```
 
 ## Architecture
