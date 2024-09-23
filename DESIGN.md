@@ -18,6 +18,9 @@ doulaid_webapp->>doulaid_db: User step completion saved
 user->>doulaid_webapp: User completes DoulaID milestone
 doulaid_webapp->>doulaid_db: User milestone completion saved
 doulaid_issuer->>doulaid_webapp: User milestone credential available
+doulaid_issuer->>cardano_watcher: User key state lookup
+doulaid_issuer->>user_agent: User milestone credential issued
+user_agent->>doulaid_issuer: User credential verified
 ```
 
 ## Architecture
@@ -25,3 +28,4 @@ Webapp System requirements:
 * DoulaID webapp available at known url and displayable in user browser
 * DoulaID webapp database saves user progress
 * DoulaID interacts with decentralized identifier for sign-in and to issue achivement verifiable credentials 
+* DoulaID issuer/verifier verifies user key state seen in Cardano Watcher
