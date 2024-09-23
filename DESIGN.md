@@ -2,7 +2,7 @@
 
 ## Ecosystem
 The following diagram of a DoulaID webapp and the integration with the **Cardano Watcher** providing verification via the Cardano blockchain:
-![Ecosystem](DoulID_Ecosystem.jpg)
+![Ecosystem](DoulaID_Ecosystem.png)
 
 ## Flow of events
 The following sequence diagrams show a simplified flow of events for the registration, step completion, and verification of milestone completion:
