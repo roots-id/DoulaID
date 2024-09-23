@@ -25,6 +25,3 @@ Webapp System requirements:
 * DoulaID webapp available at known url and displayable in user browser
 * DoulaID webapp database saves user progress
 * DoulaID interacts with decentralized identifier for sign-in and to issue achivement verifiable credentials 
-
-The following diagram shows the basic components of the system:
-![Architecture](Architecture.jpg)
