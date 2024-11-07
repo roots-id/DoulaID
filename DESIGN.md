@@ -13,10 +13,10 @@ sequenceDiagram
 actor user
 user->>doulaid_webapp: Create User
 doulaid_webapp->>doulaid_db: User Saved
+user->>doulaid_webapp: User completes DoulaID task
+doulaid_webapp->>doulaid_db: User task completion saved
 user->>doulaid_webapp: User completes DoulaID step
 doulaid_webapp->>doulaid_db: User step completion saved
-user->>doulaid_webapp: User completes DoulaID milestone
-doulaid_webapp->>doulaid_db: User milestone completion saved
 doulaid_issuer->>doulaid_webapp: User milestone credential available
 doulaid_issuer->>cardano_watcher: User key state lookup
 doulaid_issuer->>user_agent: User milestone credential issued
