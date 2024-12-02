@@ -12,16 +12,15 @@ The following sequence diagrams show a simplified flow of events for the registr
 sequenceDiagram
 actor user
 user->>doulaid_webapp: Create User
+user->>user_agent: User agent created
 doulaid_webapp->>doulaid_db: User Saved
-user->>doulaid_webapp: User completes DoulaID step
-user->>doulaid_webapp: User uploads DoulaID step evidence
-doulaid_webapp->>doulaid_db: User step completion saved
-user->>doulaid_webapp: User completes DoulaID step
-doulaid_webapp->>doulaid_db: User step completion saved
+user->>doulaid_webapp: User completes DoulaID step (1 to 5)
+user->>doulaid_webapp: User uploads step (1 to 5) DoulaID step evidence
+doulaid_webapp->>doulaid_db: User step (1 to 5) completion saved
 doulaid_issuer->>doulaid_webapp: User achievement credential available
 doulaid_issuer->>user_agent: User key state lookup
-doulaid_issuer->>user_agent: User milestone credential issued
-user_agent->>doulaid_issuer: User credential verified
+doulaid_issuer->>user_agent: User receives step (1 to 5) verifiable credentials
+user_agent->>doulaid_verifier: User credential verified
 ```
 
 ## Architecture
