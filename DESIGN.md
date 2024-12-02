@@ -18,7 +18,7 @@ doulaid_webapp->>doulaid_db: User task completion saved
 user->>doulaid_webapp: User completes DoulaID step
 doulaid_webapp->>doulaid_db: User step completion saved
 doulaid_issuer->>doulaid_webapp: User milestone credential available
-doulaid_issuer->>cardano_watcher: User key state lookup
+doulaid_issuer->>user_agent: User key state lookup
 doulaid_issuer->>user_agent: User milestone credential issued
 user_agent->>doulaid_issuer: User credential verified
 ```
