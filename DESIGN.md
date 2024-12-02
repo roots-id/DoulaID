@@ -14,12 +14,17 @@ actor user
 user->>doulaid_webapp: Create User
 user->>user_agent: User agent created
 doulaid_webapp->>doulaid_db: User Saved
+doulaid_webapp->>doulaid_webapp: Repeat the following, per step
 user->>doulaid_webapp: User completes DoulaID step (1 to 5)
 user->>doulaid_webapp: User uploads step (1 to 5) DoulaID step evidence
 doulaid_webapp->>doulaid_db: User step (1 to 5) completion saved
 doulaid_issuer->>doulaid_webapp: User achievement credential available
-doulaid_issuer->>user_agent: User key state lookup
 doulaid_issuer->>user_agent: User receives step (1 to 5) verifiable credentials
+doulaid_webapp->>doulaid_webapp: View completed Step 1 Doula certifications
+doulaid_webapp->>doulaid_webapp: View Step 2 NPI
+doulaid_webapp->>doulaid_webapp: View Step 3 Doula Business
+doulaid_webapp->>doulaid_webapp: View Step 4 ePREP
+doulaid_webapp->>doulaid_webapp: View Step 5 Medicaid ID
 user_agent->>doulaid_verifier: User credential verified
 ```
 
